@@ -17,11 +17,11 @@ For the full documentation, see: https://docs.requarks.io/install/docker</Overvi
   <Category>Cloud: Productivity:</Category>
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
   <TemplateURL/>
-  <Icon/>
+  <Icon>https://raw.githubusercontent.com/Megabyte97/unraid-templates/master/Megabyte/images/wikijs.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1622902891</DateInstalled>
+  <DateInstalled>1622903129</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>Wiki.js | A modern and powerful wiki app built on Node.js&#xD;
