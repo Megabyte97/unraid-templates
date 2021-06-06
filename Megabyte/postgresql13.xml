@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>PostgreSQL13</Name>
+  <Repository>postgres:13-alpine</Repository>
+  <Registry>https://hub.docker.com/_/postgres/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://www.postgresql.org/</Project>
+  <Overview>The PostgreSQL object-relational database system provides reliability and data integrity. &#xD;
+&#xD;
+Template for the official docker container.&#xD;
+&#xD;
+For the full documentation, see: https://hub.docker.com/_/postgres/&#xD;
+</Overview>
+  <Category>Productivity: Network:Management</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/Megabyte97/unraid-templates/master/Megabyte/images/postgresql.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1622989691</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>The PostgreSQL object-relational database system provides reliability and data integrity. &#xD;
+&#xD;
+Template for the official docker container.&#xD;
+&#xD;
+For the full documentation, see: https://hub.docker.com/_/postgres/&#xD;
+</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir/>
+      <ContainerDir>/var/lib/postgresql/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>POSTGRES_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>POSTGRES_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="POSTGRES_USER" Target="POSTGRES_USER" Default="" Mode="" Description="This optional environment variable is used in conjunction with POSTGRES_PASSWORD to set a user and its password.&amp;lt;/br&amp;gt;&amp;lt;/br&amp;gt;This variable will create the specified user with superuser power and a database with the same name. If it is not specified, then the default user of " Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="POSTGRES_PASSWORD" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="This environment variable is required for you to use the PostgreSQL image. It must not be empty or undefined.&amp;lt;/br&amp;gt;&amp;lt;/br&amp;gt;This environment variable sets the superuser password for PostgreSQL. The default superuser is defined by the POSTGRES_USER environment variable." Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="Database path" Target="/var/lib/postgresql/data" Default="" Mode="rw" Description="The path where the database is stored." Type="Path" Display="always" Required="true" Mask="false"/>
+</Container>
