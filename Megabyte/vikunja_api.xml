@@ -18,7 +18,7 @@ This template provides the basic fields for the container to work. More settings
   <Category>Productivity: Tools:</Category>
   <WebUI>http://[IP]:[PORT:3456]/api/v1/info</WebUI>
   <TemplateURL/>
-  <Icon>https://raw.githubusercontent.com/Megabyte97/unraid-templates/wikijs/Megabyte/images/vikunja.png</Icon>
+  <Icon>https://raw.githubusercontent.com/Megabyte97/unraid-templates/master/Megabyte/images/vikunja.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
