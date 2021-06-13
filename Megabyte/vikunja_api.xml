@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>VikunjaAPI</Name>
+  <Repository>vikunja/api</Repository>
+  <Registry>https://hub.docker.com/r/vikunja/api/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://vikunja.io/</Project>
+  <Overview>The to-do app to organize your life.&#xD;
+&#xD;
+Template for the official docker container.&#xD;
+&#xD;
+For the full documentation, see: https://vikunja.io/docs/&#xD;
+This template provides the basic fields for the container to work. More settings can be found here: https://vikunja.io/docs/config-options/</Overview>
+  <Category>Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:3456]/api/v1/info</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/Megabyte97/unraid-templates/wikijs/Megabyte/images/vikunja.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1623591291</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>The to-do app to organize your life.&#xD;
+&#xD;
+Template for the official docker container.&#xD;
+&#xD;
+For the full documentation, see: https://vikunja.io/docs/&#xD;
+This template provides the basic fields for the container to work. More settings can be found here: https://vikunja.io/docs/config-options/</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/vikunja_api/files</HostDir>
+      <ContainerDir>/app/vikunja/files</ContainerDir>
+      <Mode>rw,slave</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/vikunja_api/database</HostDir>
+      <ContainerDir>/app/vikunja/database</ContainerDir>
+      <Mode>rw,slave</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>false</Value>
+      <Name>VIKUNJA_SERVICE_ENABLEREGISTRATION</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>VIKUNJA_SERVICE_FRONTENDURL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>GMT</Value>
+      <Name>VIKUNJA_SERVICE_TIMEZONE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>VIKUNJA_DATABASE_TYPE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>VIKUNJA_DATABASE_HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>VIKUNJA_DATABASE_USER</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>VIKUNJA_DATABASE_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>VIKUNJA_DATABASE_DATABASE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>/app/vikunja/database/vikunja.db</Value>
+      <Name>VIKUNJA_DATABASE_PATH</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>VIKUNJA_MAILER_ENABLED</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>VIKUNJA_MAILER_HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>VIKUNJA_MAILER_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>VIKUNJA_MAILER_USERNAME</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>VIKUNJA_MAILER_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>VIKUNJA_MAILER_FROMEMAIL</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Data" Target="/app/vikunja/files" Default="/mnt/user/appdata/vikunja_api/files" Mode="rw,slave" Description="Volume where all uploaded files are stored" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/vikunja_api/files</Config>
+  <Config Name="sqlite" Target="/app/vikunja/database" Default="/mnt/user/appdata/vikunja_api/database" Mode="rw,slave" Description="Volume where the sqlite database is stored. Make sure you map this to no loose you data after restarting the container&amp;lt;/br&amp;gt;Can be left empty if you don't use sqlite" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/vikunja_api/database</Config>
+  <Config Name="Enable Registration" Target="VIKUNJA_SERVICE_ENABLEREGISTRATION" Default="false" Mode="" Description="Whether to let new users registering themselves or not&amp;lt;/br&amp;gt;See here how to create users from CLI: https://vikunja.io/docs/cli/#user&amp;lt;/br&amp;gt;&amp;lt;/br&amp;gt;When you expose your Vikunja instance to the internet, you probably want to leave this disabled" Type="Variable" Display="always" Required="true" Mask="false">false</Config>
+  <Config Name="Frontend URL" Target="VIKUNJA_SERVICE_FRONTENDURL" Default="" Mode="" Description="The URL of the frontend, used to send password reset emails." Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Timezone" Target="VIKUNJA_SERVICE_TIMEZONE" Default="GMT" Mode="" Description="The time zone all timestamps are in. Please note that time zones have to use the official tz database names. UTC or GMT offsets won&#x2019;t work." Type="Variable" Display="always" Required="false" Mask="false">GMT</Config>
+  <Config Name="Database Type" Target="VIKUNJA_DATABASE_TYPE" Default="" Mode="" Description="Database type to use. Supported types are mysql, postgres and sqlite." Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Database Host" Target="VIKUNJA_DATABASE_HOST" Default="" Mode="" Description="Database host&amp;lt;/br&amp;gt;Not required for sqlite" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database User" Target="VIKUNJA_DATABASE_USER" Default="" Mode="" Description="Database User&amp;lt;/br&amp;gt;Not required for sqlite" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Database Password" Target="VIKUNJA_DATABASE_PASSWORD" Default="" Mode="" Description="Database Password&amp;lt;/br&amp;gt;Not required for sqlite" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Database" Target="VIKUNJA_DATABASE_DATABASE" Default="" Mode="" Description="Database to use&amp;lt;/br&amp;gt;Not required for sqlite" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SQLite Path" Target="VIKUNJA_DATABASE_PATH" Default="/app/vikunja/database/vikunja.db" Mode="" Description="When using sqlite, this is the path where to store the data.&amp;lt;/br&amp;gt;Make sure this path is mapped somewhere on your array!" Type="Variable" Display="advanced" Required="false" Mask="false">/app/vikunja/database/vikunja.db</Config>
+  <Config Name="Mailer Enabled" Target="VIKUNJA_MAILER_ENABLED" Default="false" Mode="" Description="Whether to enable the mailer or not.&amp;lt;/br&amp;gt;If it is disabled, all users are enabled right away and password reset is not possible." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="Mailer Host" Target="VIKUNJA_MAILER_HOST" Default="" Mode="" Description="SMTP Host" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Mailer Port" Target="VIKUNJA_MAILER_PORT" Default="" Mode="" Description="SMTP Host port" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Mailer Username" Target="VIKUNJA_MAILER_USERNAME" Default="" Mode="" Description="SMTP username" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Mailer Password" Target="VIKUNJA_MAILER_PASSWORD" Default="" Mode="" Description="SMTP password&#13;&#10;&#13;&#10;" Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="Mailer From E-Mail" Target="VIKUNJA_MAILER_FROMEMAIL" Default="" Mode="" Description="The default from address when sending emails" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>

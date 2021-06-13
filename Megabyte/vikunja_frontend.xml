@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>VikunjaFrontend</Name>
+  <Repository>vikunja/frontend</Repository>
+  <Registry>https://hub.docker.com/r/vikunja/frontend/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://vikunja.io/</Project>
+  <Overview>The to-do app to organize your life.&#xD;
+Note: Requires an instance of the API!&#xD;
+&#xD;
+Template for the official docker container.&#xD;
+&#xD;
+For the full documentation, see: https://vikunja.io/docs/</Overview>
+  <Category>Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/Megabyte97/unraid-templates/wikijs/Megabyte/images/vikunja.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1623591490</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>The to-do app to organize your life.&#xD;
+Note: Requires an instance of the API!&#xD;
+&#xD;
+Template for the official docker container.&#xD;
+&#xD;
+For the full documentation, see: https://vikunja.io/docs/</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data/>
+  <Environment/>
+  <Labels/>
+</Container>
